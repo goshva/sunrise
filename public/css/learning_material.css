@@ -1,0 +1,226 @@
+.learning_material{
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.learning_material_content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.learning_material_content_up{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.learning_material_content_up_left{
+    width: 70%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.status-bar{
+    width: 80%;
+    height: 10px;
+    border-radius: 8px;
+    background: #7FC4FA;
+    margin-top: 10px;
+}
+.status-per{
+    width: 20%;
+    height: 10px;
+    display: block;
+    border-radius: 8px;
+    background: #1367A9;
+}
+.learning_material_header{
+    width: 100%;
+    height: 50%;
+
+}
+.learning_material_header h2{
+    font-family: "Inter";
+font-size: clamp(18px,2.5vw,25px);
+font-weight: 700;
+line-height: 40px;
+letter-spacing: -0.003em;
+text-align: left;
+
+}
+.learning_material_content_up_left_down{
+    width: 100%;
+    height: 50%;
+}
+.learning_material_percent span{
+    font-family: 'Inter';
+    font-size: clamp(11px,2vw,14px);
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8A92A6;
+
+}
+.learning_material_content_up_right{
+    width: 30%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.learning_material_button{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.learning_material_button button{
+    font-family: "Roboto";
+font-size: clamp(11px,2vw,14px);
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: center;
+background: var(--main_blue);
+color: #fff;
+width: 100%;
+height: 40px;
+border: 1px solid var(--main_blue);
+border-radius: 10px;
+}
+
+@media (max-width:745px){
+    .learning_material_content_up{
+        flex-direction: column;
+    }
+    .learning_material_content_up_left, .learning_material_content_up_right{
+        width: 100%;
+    }
+    .status-bar{
+        width: 100%;
+    }
+}
+.learning_material_content_down{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.learning_material_content_down_content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 3px  rgba(0, 0, 0, 0.15);
+
+}
+.learning_material_content_down_content_header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #CFD1D8;
+    padding-left: 20px;
+}
+.learning_material_content_down_content_header h2{
+    font-family: 'Inter';
+font-size: clamp(14px,2vw,18px);
+font-weight: 600;
+line-height: 26px;
+letter-spacing: 0px;
+text-align: left;
+
+}
+.learning_material_content_down_content_text_container{
+    width: 100%;
+    height: 450px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+.learning_material_content_down_content_text_container p{
+    font-family: 'Inter';
+    font-size: clamp(12px,2vw,16px);
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #343A40;
+}
+
+
+.repost-slider{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.repost-slide_active{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    background: var(--main-blue, #104772);
+    color: #FFF;
+    text-align: right;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.repost-slide{
+    cursor: pointer;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    color: var(--gray-light-text, #8A92A6);
+    text-align: right;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: all .3s ease-out;
+}
+
+.repost-slide:hover{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    background: var(--main-blue, #104772);
+    color: #FFF;
+    text-align: right;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

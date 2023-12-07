@@ -1,0 +1,9 @@
+0000000000000000000000000000000000000000 83187325a6794c7caf595bb843c0215ad911276e mennuaa <menua777menua@gmail.com> 1693424210 +0400	commit (initial): first commit
+83187325a6794c7caf595bb843c0215ad911276e 0000000000000000000000000000000000000000 mennuaa <menua777menua@gmail.com> 1693424257 +0400	Branch: renamed refs/heads/master to refs/heads/menua
+0000000000000000000000000000000000000000 83187325a6794c7caf595bb843c0215ad911276e mennuaa <menua777menua@gmail.com> 1693424257 +0400	Branch: renamed refs/heads/master to refs/heads/menua
+83187325a6794c7caf595bb843c0215ad911276e 9f8141ab1ea46ed42f7a83306c02b8e4d7a8d7b1 mennuaa <menua777menua@gmail.com> 1693424303 +0400	commit: first commit
+9f8141ab1ea46ed42f7a83306c02b8e4d7a8d7b1 0000000000000000000000000000000000000000 mennuaa <menua777menua@gmail.com> 1693424303 +0400	Branch: renamed refs/heads/menua to refs/heads/main
+0000000000000000000000000000000000000000 9f8141ab1ea46ed42f7a83306c02b8e4d7a8d7b1 mennuaa <menua777menua@gmail.com> 1693424303 +0400	Branch: renamed refs/heads/menua to refs/heads/main
+9f8141ab1ea46ed42f7a83306c02b8e4d7a8d7b1 b54645b018b89ece34d9213017badc886c3be33a mennuaa <menua777menua@gmail.com> 1693424660 +0400	pull --rebase origin main (start): checkout b54645b018b89ece34d9213017badc886c3be33a
+b54645b018b89ece34d9213017badc886c3be33a d2d2e9c8f86587873564d41f864517b54a03c456 mennuaa <menua777menua@gmail.com> 1693424789 +0400	commit: first commit
+d2d2e9c8f86587873564d41f864517b54a03c456 d2d2e9c8f86587873564d41f864517b54a03c456 mennuaa <menua777menua@gmail.com> 1693424832 +0400	rebase (continue) (finish): returning to refs/heads/main

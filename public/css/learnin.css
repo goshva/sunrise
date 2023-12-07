@@ -1,0 +1,222 @@
+.learning_main {
+  display: grid;
+  grid-area: main;
+  gap: 20px;
+  height: 600px;
+}
+
+.learning_main_conteiner {
+ padding: 45px 30px 45px;
+}
+
+.learning_main-contnet {
+  box-shadow: 0 0 20px rgba(35, 51, 63, 0.144);
+  height: 700px;
+}
+
+.content {
+  overflow: auto;
+  height: 500px;
+}
+
+.learning_main_subtitle {
+  color: var(--gray-light-text, #8a92a6);
+  font-size: 14px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.learning_main-context {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.learning_main-context h1 {
+  color: var(--gray-text, #343a40);
+  font-size: 28px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.084px;
+}
+
+.learning_main-contnet-subtext {
+  padding: 20px;
+  color: var(--gray-text, #343a40);
+  font-size: 18px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.learning_main-contnet-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 20px;
+}
+
+.learning_main-contnet-flex {
+  display: grid;
+  grid-template-columns: 1fr 3fr 0.7fr 0.1fr;
+  padding: 5px 20px;
+  justify-content: start;
+}
+.learning_main-content_data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.learning_main-title {
+  text-align: start !important;
+  color: var(--gray-text, #343a40);
+  font-size: 14px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.learning_main-data {
+  text-align: start;
+  color: var(--unnamed, #343a40);
+  font-size: clamp(11px, 2vw, 14px);
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 8px;
+  display: flex;
+  align-items: center;
+  margin-left: 3px;
+  line-height: normal;
+}
+
+.btn {
+  display: flex;
+  width: 170px;
+  padding: 10px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: inline-block;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  color: var(--gray-text, #343a40);
+  text-align: center;
+  font-size: 14px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  box-shadow: 0px 2px 12px 0px rgba(35, 51, 63, 0.15);
+}
+
+.btn:hover {
+  background-color: #104772;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  border: 0.1px solid #104772;
+  background-color: #104772;
+  background-clip: content-box;
+  height: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f3f3f4;
+  border-radius: 100px;
+}
+
+.circle-wrap {
+  margin: 0 30px;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: conic-gradient(#70c493 341deg, #dfdfdf 0deg);
+}
+
+.inside {
+  color: var(--unnamed, #343a40);
+  font-size: 18px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.28px;
+  text-align: center;
+  width: 55px;
+  height: 55px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  margin-left: 7px;
+  margin-top: 8px;
+  line-height: 52px;
+}
+
+.learning_main-flex {
+  display: flex;
+  justify-self: start;
+  align-items: center;
+}
+
+@media (max-width: 970px) {
+  .learning_main-contnet {
+    height: 530px;
+  }
+  .align-items-center.gap-3{
+      justify-content:end;
+  }
+  .content {
+    height: 600px;
+    overflow-x:scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .learning_main-contnet-flex {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 90%;
+    box-shadow: 0 5px 12px rgb(35, 51, 63, 0.15);
+    margin-bottom: 10px;
+  }
+  .learning_main-content_data {
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: initial;
+    flex-wrap: wrap;
+    height: 89px;
+  }
+  .learning_main-flex a {
+    display: none;
+  }
+  .learning_main-flex {
+    height: 150px;
+    justify-content: center;
+  }
+  .learning_main-data {
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    justify-content: center;
+    width: 100%;
+  }
+  .learning_main-contnet{
+      height:auto;
+  }
+}

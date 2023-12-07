@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://server89.hosting.reg.ru:1500/ispmgr
+HostUrl=https://server89.hosting.reg.ru:1500/ispmgr?func=db.dump&elid=u2217969_default-%3EMySQL&plid=&newwindow=yes

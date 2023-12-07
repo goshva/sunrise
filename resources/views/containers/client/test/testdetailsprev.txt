@@ -1,0 +1,168 @@
+@extends('components.head')
+@section('code')
+<div class="sect">
+    <x-client-side-bar></x-client-side-bar>
+    <x-client-header></x-client-header>
+
+
+    <div class="test-details_main">  
+        @if(session('success'))
+
+        <div class="alert alert-success mt-2" role="alert">
+                  {{  session()->pull('success')}}
+                </div>
+                <script>
+                let error = document.querySelector('.alert-success');
+                setTimeout(() => {
+                    error.style.display = 'none';
+                }, 3000);
+    
+            </script>
+    @endif
+    @if(session('Warning'))
+
+    <div class="alert alert-warning mt-2" role="alert">
+              {{  session()->pull('Warning')}}
+            </div>
+            <script>
+            let error = document.querySelector('.alert-warning');
+            setTimeout(() => {
+                error.style.display = 'none';
+            }, 3000);
+
+        </script>
+@endif
+        <div class="test-details_main-nav">
+            <a class="test-details_main-nav_first"href="{{ route("client.tests")}}">Тестирование</a>
+            <span>/</span>
+            <a class="test-details_main-nav_last" href="">{{ $competetion->name }}</a>
+
+            <h1 class="test-details_main-nav_title">Законодательство в сфере газоснабжения и строительства</h1>
+        </div>
+
+        <div class="test-details_main-content">
+            <div class="test-details_main-content_card-grid">
+            @foreach ($competetion->indicators as $indicator)
+                <div class="test-details_main-content_card">
+                    <div class="test-details_main-content_card-up">
+                        <div class="test-details_main-content_card-flex">
+                            <p>Тема</p>
+                            <h3>{{ $indicator->name }}</h3>
+                        </div>
+                    @if ($indicator->test)
+                        @foreach ($user->tests as $test)
+                            @if($test->test_id === $indicator->test->id)
+                        <div class="col-md-3 col-sm-6">
+                            <div  class="progress @if($test->completed>= 4)   green @elseif ($test->completed>= 2) yellow @else pink @endif">
+                                <span class="progress-left">
+                                    <span id="indicator-{{ $indicator->id }}" class="progress-bar"></span>
+                                </span>
+                                <span class="progress-right">
+                                    <span id="indicator-{{ $indicator->id }}-right"  class="progress-bar"></span>
+                                </span>
+
+                                    <div  class="progress-value">{{ $test->completed }}/5</div>
+                                    <style>
+                                           .progress .progress-right #indicator-{{ $indicator->id }}-right{
+                                                left: -100%;
+                                                border-top-left-radius: 40px;
+                                                border-bottom-left-radius: 40px;
+                                                border-right: 0;
+                                                -webkit-transform-origin: center right;
+                                                transform-origin: center right;
+                                                @if ($test->completed>3)
+                                                transform: rotate(180deg);
+                                                @else
+                                                transform: rotate({{ ($test->completed)*36 }}deg);
+                                                @endif
+                                            }
+                                                   #indicator-{{ $indicator->id }}{
+                                                    @if ($test->completed>3)
+                                                        @if($test->completed == 5)
+                                                     transform: rotate({{ ($test->completed)*36 }}deg);
+
+                                                        @else
+                                                                transform: rotate({{ ($test->completed)*10 }}deg);
+
+                                                        @endif
+                                                @else
+                                                transform: rotate(0deg);
+                                                @endif
+                                            }
+                                    </style>
+
+                                
+                            </div>
+                        </div>
+                           @endif
+                        @endforeach
+                               
+                            @else
+                            <div class="col-md-3 col-sm-6">
+                                <div  class="progress   green">
+                                    <span class="progress-left">
+                                        <span id="indicator-{{ $indicator->id }}" class="progress-bar"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                        <span id="indicator-{{ $indicator->id }}-right"  class="progress-bar"></span>
+                                    </span>
+    
+                                    <div class="progress-value">0/5</div>
+                                    <style>
+                                        .progress .progress-right #indicator-{{ $indicator->id }}-right{
+                                             left: -100%;
+                                             border-top-left-radius: 40px;
+                                             border-bottom-left-radius: 40px;
+                                             border-right: 0;
+                                             -webkit-transform-origin: center right;
+                                             transform-origin: center right;
+                                             -webkit-transform: rotate(0);
+                                                         transform: rotate(0);
+                                         }
+                                 </style>
+    
+                                    
+                                </div>
+                            </div>
+                            
+                       @endif
+
+                    </div>
+                    <div class="test-details_main-content_card-down">
+                        <div class="test-details_main-content_card-down-info">
+                            @if ($indicator->test)
+                            @foreach ($user->tests as $test)
+                                @if($test->test_id === $indicator->test->id)
+                                <span>{{ $test->completed }}/5</span><p> вопросов решено</p>
+
+                                @endif
+                            @endforeach
+                                
+                            @else
+                            <span>0/5</span><p> вопросов решено</p>
+                                
+                            @endif
+                        </div>
+                        <div class="test-details_main-content_card-down-reting">
+                          
+                        </div>
+                    </div>
+                    @if ($indicator->test)
+                        @foreach ($user->tests as $test)
+                            @if($test->test_id === $indicator->test->id)
+                                @if($test->completed === 5)
+                            <a href="/test-results/{{ $indicator->id }}" class="test-details_main-content_card-btn">Посмотреть результат</a>
+                                @else
+                                <a href="/test/{{ $indicator->id }}" class="test-details_main-content_card-btn">Продолжить тестирование</a>
+                                @endif
+                            @endif
+                        @endforeach
+                    @endif
+                </div>
+            @endforeach    
+            </div>
+        </div>
+    </div>
+   </div>
+<x-footer></x-footer>
+@endsection
