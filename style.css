@@ -1,3 +1,6 @@
+body {
+    overflow: hidden;
+}
 .parallax {
     perspective: 1px;
     perspective-origin: center;
