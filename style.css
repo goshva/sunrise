@@ -53,7 +53,7 @@ body {
 
 #city4 {
   fill: #222032;
-  transform: translateZ(calc(-1.7*var(--main-step-px))) scale(calc(6*var(--main-step))) translateY(58vh);
+  transform: translateZ(calc(-1.7*var(--main-step-px))) scale(calc(6*var(--main-step))) translateY(59vh);
 }
 
 #city5 {
@@ -63,17 +63,17 @@ body {
 
 #mountain1 {
   fill: #202a5c;
-  transform: translateZ(calc(-9*var(--main-step-px))) scale(calc(13*var(--main-step))) translateY(47vh);
+  transform: translateZ(calc(-9*var(--main-step-px))) scale(calc(14*var(--main-step))) translateY(47vh);
 }
 
 #mountain2 {
   fill: #4a4d82;
-  transform: translateZ(calc(-10*var(--main-step-px))) scale(calc(14*var(--main-step))) translateY(41vh);
+  transform: translateZ(calc(-10*var(--main-step-px))) scale(calc(14*var(--main-step))) translateY(42vh) translateX(-1vh) scaleX(1.1);
 }
 
 #mountain3 {
   fill: #5f5d99;
-  transform: translateZ(calc(-12*var(--main-step-px))) scale(calc(16*var(--main-step))) translateY(42vh);
+  transform: translateZ(calc(-12*var(--main-step-px))) scale(calc(16*var(--main-step))) translateY(42vh) translateX(-1vh) scaleX(1.1);
 }
 
 #mountain4 {
