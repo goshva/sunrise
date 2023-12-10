@@ -9,8 +9,10 @@
 body {
   overflow: hidden;
   background: rgb(2,0,36);
-  background: linear-gradient( #9198e5,#e66465);
+  background: linear-gradient( #9198e5,#e66465 77%, #111115 7%);
   scroll-behavior: revert-layer;
+  margin: 0;
+  
 }
   
 .parallax {
@@ -51,7 +53,7 @@ body {
 
 #city4 {
   fill: #222032;
-  transform: translateZ(calc(-2*var(--main-step-px))) scale(calc(6*var(--main-step))) translateY(58vh);
+  transform: translateZ(calc(-1.7*var(--main-step-px))) scale(calc(6*var(--main-step))) translateY(58vh);
 }
 
 #city5 {
@@ -61,32 +63,27 @@ body {
 
 #mountain1 {
   fill: #202a5c;
-  transform: translateZ(-2.25px) scale(3.25) translateY(-1vh);
-  transform: translateZ(calc(-9*var(--main-step-px))) scale(calc(13*var(--main-step))) translateY(46vh);
+  transform: translateZ(calc(-9*var(--main-step-px))) scale(calc(13*var(--main-step))) translateY(47vh);
 }
 
 #mountain2 {
   fill: #4a4d82;
-  transform: translateZ(-2.5px) scale(3.5) translateY(-1vh);
   transform: translateZ(calc(-10*var(--main-step-px))) scale(calc(14*var(--main-step))) translateY(41vh);
 }
 
 #mountain3 {
   fill: #5f5d99;
-  transform: translateZ(-3px) scale(4) translateY(-10vh);
-  transform: translateZ(calc(-12*var(--main-step-px))) scale(calc(16*var(--main-step))) translateY(44vh);
+  transform: translateZ(calc(-12*var(--main-step-px))) scale(calc(16*var(--main-step))) translateY(42vh);
 }
 
 #mountain4 {
   fill: #8a7d9e;
-  transform: translateZ(-3.5px) scale(4.5) translateY(-20vh);
-  transform: translateZ(calc(-14*var(--main-step-px))) scale(calc(18*var(--main-step))) translateY(41vh);
+  transform: translateZ(calc(-14*var(--main-step-px))) scale(calc(18*var(--main-step))) translateY(41vh) translateX(2vh);
 
 }
 
 #sun {
   fill: rgba(255, 255, 0, 0.88);
-  transform: translateZ(-1px) scale(7) translateY(-25vh);
   transform: translateZ(calc(-24*var(--main-step-px))) scale(calc(28*var(--main-step))) translateY(36vh) translateX(-3vh);
 
 }
