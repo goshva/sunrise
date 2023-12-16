@@ -44,7 +44,11 @@ body {
   fill: #111115;
   transform: translateZ(calc(1*var(--main-step-px))) scale(calc(3*var(--main-step))) translateY(77vh);
 }
-
+#city1 svg {
+  position: relative;
+  bottom: -4vmax;
+  z-index: 100;
+}
 #city2 {
   fill: #12161e;
   transform: translateZ(calc(0*var(--main-step-px))) scale(calc(4*var(--main-step))) translateY(81vh);
@@ -85,7 +89,14 @@ body {
   transform: translateZ(calc(-14*var(--main-step-px))) scale(calc(18*var(--main-step))) translateY(41vh) translateX(2vh);
 
 }
-
+.container {
+  background: #111115;
+  position: fixed;
+  bottom: 0;
+  z-index: 110;
+  height: inherit;
+  color: white;
+}
 
 
 .city2-front {
