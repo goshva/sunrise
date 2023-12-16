@@ -35,7 +35,11 @@ body {
   width: 100%;
     overflow: hidden;
 }
+#sun {
+  fill: rgba(240, 200, 0, 0.82);
+  transform: translateZ(calc(-24*var(--main-step-px))) scale(calc(28*var(--main-step))) translateY(36vh) translateX(-3vh);
 
+}
 #city1 {
   fill: #111115;
   transform: translateZ(calc(1*var(--main-step-px))) scale(calc(3*var(--main-step))) translateY(77vh);
@@ -82,11 +86,7 @@ body {
 
 }
 
-#sun {
-  fill: rgba(255, 255, 0, 0.88);
-  transform: translateZ(calc(-24*var(--main-step-px))) scale(calc(28*var(--main-step))) translateY(36vh) translateX(-3vh);
 
-}
 
 .city2-front {
   background: #12161e;
