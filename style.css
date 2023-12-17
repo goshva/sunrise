@@ -1,4 +1,22 @@
+:root {
+  --main-start: .75;
+  --main-step: .25;
+  --main-step-px: .25px;
+}
+
+/*transform: translateZ(.25px) scale(calc(0*var(--main-step) + var(--main-start)))  translateY(-1vh);
+*/
+/* roboto-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v30-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 body {
+  font-family: "Roboto",Tahoma, Verdana, sans-serif;
   overflow: hidden;
   background: rgb(2, 0, 36);
   background: linear-gradient(#9198e5, #e66465 77%, #111115 7%);
@@ -30,6 +48,7 @@ body {
 }
 
 #sun {
+  color: rgba(240, 200, 0, 0.82);;
   fill: rgba(240, 200, 0, 0.82);
   transform: translateZ(calc(-24*var(--main-step-px))) scale(calc(28*var(--main-step))) translateY(36vh) translateX(-3vh);
 
