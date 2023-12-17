@@ -1,20 +1,13 @@
-:root {
-  --main-start: .75;
-  --main-step: .25;
-  --main-step-px: .25px;
-}
-/*transform: translateZ(.25px) scale(calc(0*var(--main-step) + var(--main-start)))  translateY(-1vh);
-*/
-
 body {
   overflow: hidden;
-  background: rgb(2,0,36);
-  background: linear-gradient( #9198e5,#e66465 77%, #111115 7%);
-  scroll-behavior: revert-layer;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(#9198e5, #e66465 77%, #111115 7%);
+  scroll-behavior: revert;
+  /*scroll-behavior: revert-layer;*/
   margin: 0;
-  
+
 }
-  
+
 .parallax {
   perspective: 1px;
   perspective-origin: center;
@@ -26,29 +19,33 @@ body {
 
 .parallax .group {
   position: relative;
-    height: 100vh;
+  height: 100vh;
   transform-style: preserve-3d;
 }
 
 .parallax .layer {
   position: absolute;
   width: 100%;
-    overflow: hidden;
+  overflow: hidden;
 }
+
 #sun {
   fill: rgba(240, 200, 0, 0.82);
   transform: translateZ(calc(-24*var(--main-step-px))) scale(calc(28*var(--main-step))) translateY(36vh) translateX(-3vh);
 
 }
+
 #city1 {
   fill: #111115;
   transform: translateZ(calc(1*var(--main-step-px))) scale(calc(3*var(--main-step))) translateY(77vh);
 }
+
 #city1 svg {
   position: relative;
   bottom: -4vmax;
   z-index: 100;
 }
+
 #city2 {
   fill: #12161e;
   transform: translateZ(calc(0*var(--main-step-px))) scale(calc(4*var(--main-step))) translateY(81vh);
@@ -89,6 +86,7 @@ body {
   transform: translateZ(calc(-14*var(--main-step-px))) scale(calc(18*var(--main-step))) translateY(41vh) translateX(2vh);
 
 }
+
 .container {
   background: #111115;
   position: fixed;
@@ -113,11 +111,12 @@ body {
   background-color: #111115;
   width: 100vw;
   height: 125vh;
+  overscroll-behavior: none;
+
 }
 
 .site_name {
-    color: #FFF;
-    display: inline-block;
-    margin: 0 0 0 20px;
+  color: #FFF;
+  display: inline-block;
+  margin: 0 0 0 20px;
 }
-
