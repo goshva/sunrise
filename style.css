@@ -139,3 +139,8 @@ body {
   display: inline-block;
   margin: 0 0 0 20px;
 }
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
